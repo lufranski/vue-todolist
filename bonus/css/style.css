@@ -14,10 +14,11 @@
 
 .on-mount {
     transition: 1s;
-    display: block;
+    /* display: block; */
 }
 
 h1 {
+    transition: 1s;
     color: #10A19D;
     font-weight: bold;
 }
