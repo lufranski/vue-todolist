@@ -23,7 +23,15 @@ createApp({
     },
     methods: {
         addTask(){
-            this.tasks.unshift({text:this.newTask, done:false});
+            
+            if(this.newTask.length < 5 || this.newTask === ''){
+                // error
+            }else {
+                
+                this.tasks.unshift({text:this.newTask, done:false});
+            
+            }
+            
         }
     }
 }).mount('#app')
