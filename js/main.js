@@ -20,5 +20,10 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        addTask(){
+            this.tasks.unshift({text:this.newTask, done:false});
+        }
     }
 }).mount('#app')

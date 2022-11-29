@@ -16,8 +16,11 @@
 
         <div class="wrapper">
 
-            <input type="text" placeholder="Inserisci un task ...">
-            <button>Aggiungi</button>
+            <input type="text" placeholder="Inserisci un task ..." v-model="newTask">
+            <button @click="addTask">Aggiungi</button>
+            <div class="error">
+                <small>La tua task deve contenere almeno 5 lettere!</small>
+            </div>
     
             <ul>
                 <li v-for="element in tasks">
