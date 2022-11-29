@@ -73,6 +73,15 @@ i {
     cursor: pointer;
 }
 
+.fa-check {
+    margin-right: 10px;
+}
+
 h2 {
     color: #10A19D;
+}
+
+.done {
+    color: #00FFAB;
+    font-weight: bold;
 }

@@ -31,13 +31,18 @@
                 
                 <ul v-if="tasks.length > 0">
                     <li v-for="(element, index) in tasks">
-                        {{element.text}}
-                        <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
+                        <span class="task-name" :class="tasks[index].done === true? 'done' : '' ">
+                            {{element.text}}
+                        </span>
+                        <span class="controls">
+                            <i class="fa-solid fa-check" @click="taskDone(index)"></i>
+                            <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
+                        </span>
                     </li>
                 </ul>
     
                 <h2 v-else>Non hai tasks da svolgere &#128121;</h2>
-                
+
             </div>
 
 

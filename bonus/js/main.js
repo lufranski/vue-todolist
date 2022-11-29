@@ -5,6 +5,7 @@ createApp({
         return{
             error: false,
             newTask: '',
+            myClass: 'done',
             tasks: [
                 {
                     text: 'Fare i compiti',
@@ -12,7 +13,7 @@ createApp({
                 },
                 {
                     text: 'Fare la spesa',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Fare il bucato',
@@ -43,6 +44,11 @@ createApp({
         deleteTask(indexArray){
 
             this.tasks.splice(indexArray, 1);
+
+        },
+        taskDone(indice){
+
+            this.tasks[indice].done = true;
 
         }
     }
