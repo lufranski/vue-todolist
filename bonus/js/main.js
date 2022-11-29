@@ -6,6 +6,7 @@ createApp({
             error: false,
             newTask: '',
             myClass: 'done',
+            containerClass: '',
             tasks: [
                 {
                     text: 'Fare i compiti',
@@ -50,6 +51,14 @@ createApp({
 
             this.tasks[indice].done = true;
 
+        },
+        showAfterMount(){
+            
+            this.containerClass = '.on-mount';
+        
         }
+    },
+    mounted(){
+        this.showAfterMount();
     }
 }).mount('#app')

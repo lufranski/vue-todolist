@@ -9,6 +9,12 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    display: none;
+}
+
+.on-mount {
+    transition: 1s;
+    display: block;
 }
 
 h1 {
