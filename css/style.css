@@ -22,7 +22,7 @@ ul {
 
 li {
     width: 50%;
-    margin: 0 auto;
+    margin: 5px auto;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;

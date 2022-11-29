@@ -20,8 +20,8 @@
             <button>Aggiungi</button>
     
             <ul>
-                <li>
-                    Task
+                <li v-for="element in tasks">
+                    {{element.text}}
                     <i class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
