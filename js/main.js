@@ -37,6 +37,8 @@ createApp({
             
             }
             
+            this.newTask='';
+
         }
     }
 }).mount('#app')
