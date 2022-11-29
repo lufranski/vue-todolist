@@ -39,6 +39,11 @@ createApp({
             
             this.newTask='';
 
+        },
+        deleteTask(indexArray){
+
+            this.tasks.splice(indexArray, 1);
+
         }
     }
 }).mount('#app')

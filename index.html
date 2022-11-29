@@ -19,13 +19,13 @@
             <input type="text" placeholder="Inserisci un task ..." v-model="newTask" @KeyUp.enter="addTask">
             <button @click="addTask">Aggiungi</button>
             <div class="error" v-if="error">
-                <small>La tua task deve contenere almeno 5 lettere!</small>
+                <small>Il tuo task deve contenere almeno 5 lettere!</small>
             </div>
     
             <ul>
-                <li v-for="element in tasks">
+                <li v-for="(element, index) in tasks">
                     {{element.text}}
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
                 </li>
             </ul>
 

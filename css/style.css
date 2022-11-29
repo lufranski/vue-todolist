@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-    background-color: blue;
+    background-color: lightgrey;
     border-radius: 20px;
     padding: 50px;
 }
@@ -26,11 +26,15 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
-    background-color: aquamarine;
+    background-color: grey;
     border-radius: 20px;
 }
 
 .error {
     color: red;
     font-weight: bold;
+}
+
+i , button {
+    cursor: pointer;
 }
