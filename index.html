@@ -22,12 +22,14 @@
                 <small>Il tuo task deve contenere almeno 5 lettere!</small>
             </div>
     
-            <ul>
+            <ul v-if="tasks.length > 0">
                 <li v-for="(element, index) in tasks">
                     {{element.text}}
                     <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
                 </li>
             </ul>
+
+            <h2 v-else>Non hai tasks da svolgere &#128121;</h2>
 
         </div>
     </div>
