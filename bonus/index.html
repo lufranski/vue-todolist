@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app" class="container">
+        <h1>ToDoList</h1>
+
+        <div class="wrapper">
+
+            <div class="input-zone">
+                
+                <input type="text" placeholder="Inserisci un task ..." v-model="newTask" @KeyUp.enter="addTask">
+                <div class="button" @click="addTask">Aggiungi</div>
+                
+            </div>
+            
+            <div class="error" v-if="error">
+                <small>Il tuo task deve contenere almeno 5 lettere!</small>
+            </div>
+            
+            <div class="output-zone">
+                
+                <ul v-if="tasks.length > 0">
+                    <li v-for="(element, index) in tasks">
+                        {{element.text}}
+                        <i class="fa-solid fa-xmark" @click="deleteTask(index)"></i>
+                    </li>
+                </ul>
+    
+                <h2 v-else>Non hai tasks da svolgere &#128121;</h2>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
