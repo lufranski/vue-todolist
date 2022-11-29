@@ -16,7 +16,7 @@
 
         <div class="wrapper">
 
-            <input type="text" placeholder="Inserisci un task ..." v-model="newTask">
+            <input type="text" placeholder="Inserisci un task ..." v-model="newTask" @KeyUp.enter="addTask">
             <button @click="addTask">Aggiungi</button>
             <div class="error" v-if="error">
                 <small>La tua task deve contenere almeno 5 lettere!</small>
