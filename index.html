@@ -18,7 +18,7 @@
 
             <input type="text" placeholder="Inserisci un task ..." v-model="newTask">
             <button @click="addTask">Aggiungi</button>
-            <div class="error">
+            <div class="error" v-if="error">
                 <small>La tua task deve contenere almeno 5 lettere!</small>
             </div>
     
