@@ -52,13 +52,13 @@ createApp({
             this.tasks[indice].done = true;
 
         },
-        showAfterMount(){
+        // showAfterMount(){
             
-            this.containerClass = '.on-mount';
+        //     this.containerClass = '.on-mount';
         
-        }
+        // }
     },
-    mounted(){
-        this.showAfterMount();
-    }
+    // mounted(){
+    //     this.showAfterMount();
+    // }
 }).mount('#app')
